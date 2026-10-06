@@ -1,0 +1,81 @@
+Jukebox — included audio credits
+Checked: 2026-10-05
+
+These are individual recording excerpts, not a blanket license for all music in Jukebox.
+Excerpts retain the licenses stated below. No additional restrictions are imposed on the CC audio.
+Changes: excerpt selection, constant volume gain, short fades, and MP3 encoding. No time stretch.
+The licensing statements concern these recordings; the independent software is a separate work.
+
+G02_A
+贝多芬《月光奏鸣曲》Op.27 No.2，第一乐章 Adagio sostenuto
+Composer: Ludwig van Beethoven
+Recording: Paul Pitman（钢琴）；Musopen 来源
+Source: https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_sonata_no._14_in_c_sharp_minor_%27moonlight%27%2C_op._27_no._2_-_i._adagio_sostenuto.ogg
+License: Public-domain dedication / Musopen attribution
+License URL: https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_sonata_no._14_in_c_sharp_minor_%27moonlight%27%2C_op._27_no._2_-_i._adagio_sostenuto.ogg
+Changes: Excerpt 4.4–45.1 s; constant gain 13.56 dB; fades 0.025 / 0.9 s; MP3 encoding.
+Additional attribution: Paul Pitman / Musopen — https://musopen.org/
+
+G03_A
+Piano Sonata No. 17 in D minor, Op. 31 No. 2 “Tempest”: III. Allegretto
+Composer: Ludwig van Beethoven
+Recording: Stefano Ligoratti, piano
+Source: https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_Sonata_Op._31_No._2_(The_Tempest)_-_Third_Movement.ogg
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+Changes: Excerpt 0.0–40.0 s; constant gain -6.89 dB; fades 0.025 / 0.8 s; MP3 encoding.
+
+G03_C
+Polonaise in A major, Op. 40 No. 1 “Military”
+Composer: Frédéric Chopin
+Recording: Luis Felipe Sarro, piano (page credits Luis Sarro; file metadata credits Felipe Sarro)
+Source: https://commons.wikimedia.org/wiki/File:Chopin_-_Polonaise_op._40_no_1.ogg
+License: CC0 1.0
+License URL: https://creativecommons.org/publicdomain/zero/1.0/
+Changes: Excerpt 0.0–40.0 s; constant gain -3.9 dB; fades 0.025 / 0.8 s; MP3 encoding.
+
+G06_B
+The Planets, Op. 32: Mars, the Bringer of War
+Composer: Gustav Holst
+Recording: TMO Orchestra (Incheon performance, 2023)
+Source: https://commons.wikimedia.org/wiki/File:Holst_-_The_Planets_-_Mars,_The_Bringer_of_War_(TMO_Orchestra,_Incheon,_2023).opus
+License: CC BY 3.0
+License URL: https://creativecommons.org/licenses/by/3.0/
+Changes: Excerpt 90.0–132.0 s; constant gain -11.13 dB; fades 0.025 / 0.8 s; MP3 encoding.
+Additional attribution: Gyeonggi Arts Center Grand Theater TMO Orchestra — https://www.youtube.com/watch?v=losG9W_PUHc
+
+G07_B
+Zadok the Priest, HWV 258
+Composer: George Frideric Handel
+Recording: St Matthew’s Concert Choir and Orchestra; Damien Giromella, director
+Source: https://commons.wikimedia.org/wiki/File:Handel_-_Zadok_the_Priest,_HWV_258_(St_Matthew's_Concert_Choir,_Giromella).oga
+License: CC BY 3.0
+License URL: https://creativecommons.org/licenses/by/3.0/
+Changes: Excerpt 93.5–128.5 s; constant gain -4.91 dB; fades 0.025 / 0.8 s; MP3 encoding.
+
+G07_C
+Recuerdos de la Alhambra
+Composer: Francisco Tárrega
+Recording: Carlo Alberto Boni, solo guitar
+Source: https://commons.wikimedia.org/wiki/File:Recuerdos_de_la_Alhambra.ogg
+License: CC BY-SA 3.0
+License URL: https://creativecommons.org/licenses/by-sa/3.0/
+Changes: Excerpt 1.4–43.4 s; constant gain -3.51 dB; fades 0.025 / 0.8 s; MP3 encoding.
+
+G09_A
+The Four Seasons: Winter, RV 297 — I. Allegro non molto
+Composer: Antonio Vivaldi
+Recording: John Harrison, violin; Wichita State University Chamber Players; Robert Turizziani, conductor
+Source: https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga
+License: CC BY-SA 4.0
+License URL: https://creativecommons.org/licenses/by-sa/4.0/
+Changes: Excerpt 0.25–45.25 s; constant gain 6.64 dB; fades 0.025 / 0.8 s; MP3 encoding.
+
+G09_C
+The Entertainer — first piano theme
+Composer: Scott Joplin
+Recording: Wikimedia Commons contributor IE, live solo digital piano performance
+Source: https://commons.wikimedia.org/wiki/File:The_Entertainer_-_Scott_Joplin.ogg
+License: Public-domain dedication
+License URL: https://commons.wikimedia.org/wiki/File:The_Entertainer_-_Scott_Joplin.ogg
+Changes: Excerpt 8.7–48.7 s; constant gain -5.45 dB; fades 0.025 / 0.8 s; MP3 encoding.

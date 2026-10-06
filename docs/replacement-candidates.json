@@ -1,0 +1,118 @@
+{
+  "reasonNotApplied": "Direct HTTPS requests to Commons and upload.wikimedia.org timed out in the current restricted workspace. No replacement bytes obtained; catalog and live asset set unchanged. Download URLs derived using the documented MediaWiki filename hash convention, not fetched or tested.",
+  "candidates": [
+    {
+      "trackId": "G01_A",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clair_de_lune_%28Claude_Debussy%29_Suite_bergamasque.ogg",
+      "derivedDownloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Clair_de_lune_%28Claude_Debussy%29_Suite_bergamasque.ogg",
+      "performer": "Laurens Goedhart, piano",
+      "licenseName": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "evidenceRef": "turn133view0",
+      "notes": "Piano original; opening quiet theme. Re-cut and check leading silence.",
+      "downloaded": false,
+      "reviewedDate": "2026-10-05",
+      "status": "source-verified-download-blocked"
+    },
+    {
+      "trackId": "G04_A",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Musopen_-_In_the_Hall_Of_The_Mountain_King.ogg",
+      "derivedDownloadUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bb/Musopen_-_In_the_Hall_Of_The_Mountain_King.ogg",
+      "performer": "Czech National Symphony Orchestra / Musopen Symphony Orchestra",
+      "licenseName": "Author public-domain dedication",
+      "licenseUrl": "https://musopen.org/",
+      "evidenceRef": "turn133view1",
+      "notes": "Orchestral original. Prefer a passage showing stealth / build, not only a uniformly loud final stretch.",
+      "downloaded": false,
+      "reviewedDate": "2026-10-05",
+      "status": "source-verified-download-blocked"
+    },
+    {
+      "trackId": "G04_B",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Musopen_-_Morning.ogg",
+      "derivedDownloadUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Musopen_-_Morning.ogg",
+      "performer": "Czech National Symphony Orchestra / Musopen Symphony Orchestra",
+      "licenseName": "Author public-domain dedication",
+      "licenseUrl": "https://musopen.org/",
+      "evidenceRef": "turn133view2",
+      "notes": "Orchestral original; opening flute / oboe theme.",
+      "downloaded": false,
+      "reviewedDate": "2026-10-05",
+      "status": "source-verified-download-blocked"
+    },
+    {
+      "trackId": "G05_A",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Saint-Saens_-_The_Carnival_of_the_Animals_-_07_Aquarium.ogg",
+      "derivedDownloadUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Saint-Saens_-_The_Carnival_of_the_Animals_-_07_Aquarium.ogg",
+      "performer": "Neil and Nancy O'Doan, piano; Seattle Youth Symphony; Vilem Sokol, conductor",
+      "licenseName": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "evidenceRef": "turn142view1",
+      "notes": "Source extract has already gained 10 dB; preserve that history in credit. Human ensemble original instrumentation.",
+      "downloaded": false,
+      "reviewedDate": "2026-10-05",
+      "status": "source-verified-download-blocked"
+    },
+    {
+      "trackId": "G05_C",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:JOHN_MICHEL_CELLO-J_S_BACH_CELLO_SUITE_1_in_G_Prelude.ogg",
+      "derivedDownloadUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/JOHN_MICHEL_CELLO-J_S_BACH_CELLO_SUITE_1_in_G_Prelude.ogg",
+      "performer": "John Michel, cello",
+      "licenseName": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "evidenceRef": "turn136view2",
+      "notes": "Human unaccompanied cello original first movement; opening.",
+      "downloaded": false,
+      "reviewedDate": "2026-10-05",
+      "status": "source-verified-download-blocked"
+    },
+    {
+      "trackId": "G08_B",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Smetana%2C_M%C3%A1_vlast_-_Vltava_-_The_Moldau.ogg",
+      "derivedDownloadUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/Smetana%2C_M%C3%A1_vlast_-_Vltava_-_The_Moldau.ogg",
+      "performer": "Czech National Symphony Orchestra / Musopen Symphony Orchestra",
+      "licenseName": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "evidenceRef": "turn141view0",
+      "notes": "Find main river theme; do not blindly reuse former recording time offset.",
+      "downloaded": false,
+      "reviewedDate": "2026-10-05",
+      "status": "source-verified-download-blocked"
+    },
+    {
+      "trackId": "G09_B",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27%2C_op._95_-_ii._largo.ogg",
+      "derivedDownloadUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Antonin_Dvorak_-_symphony_no._9_in_e_minor_%27from_the_new_world%27%2C_op._95_-_ii._largo.ogg",
+      "performer": "Performer not identified on Commons source page; credit Musopen (VRT ticket 2008012110017088)",
+      "licenseName": "Author public-domain dedication",
+      "licenseUrl": "https://musopen.org/",
+      "evidenceRef": "turn142view0",
+      "notes": "Same orchestral movement; credit Musopen. Main English-horn theme entry must be checked in this recording. Can complete original group 09.",
+      "downloaded": false,
+      "reviewedDate": "2026-10-05",
+      "status": "source-verified-download-blocked"
+    }
+  ],
+  "rejectedExamples": [
+    {
+      "trackId": "G03_B",
+      "source": "US Air Force Strings / Air",
+      "reason": "String arrangement attributed to Wilhelmj, not the original D-major orchestral movement, and source explicitly labels US PD only; needs product/jurisdiction decision."
+    },
+    {
+      "trackId": "G04_C",
+      "source": "German Kitkin / Lacrimosa",
+      "reason": "CC BY 4.0 but solo-piano arrangement; does not preserve choir/orchestral timbre."
+    },
+    {
+      "trackId": "G07_A",
+      "source": "Kevin MacLeod / Danse macabre",
+      "reason": "Explicitly computer-generated; excluded."
+    },
+    {
+      "trackId": "G08_C",
+      "source": "Ashtar Moïra / Toccata et Fugue BWV565",
+      "reason": "The recording is a modern personal recording, but source only contains PD-old composition template; explicit performer grant unclear."
+    }
+  ]
+}

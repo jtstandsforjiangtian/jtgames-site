@@ -1,0 +1,1148 @@
+{
+  "version": 2,
+  "title": "Jukebox",
+  "cards": [
+    {
+      "id": "001",
+      "image": "/cards/card_001.jpg",
+      "thumbnail": "/cards/thumb_001.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "002",
+      "image": "/cards/card_002.jpg",
+      "thumbnail": "/cards/thumb_002.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "003",
+      "image": "/cards/card_003.jpg",
+      "thumbnail": "/cards/thumb_003.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "004",
+      "image": "/cards/card_004.jpg",
+      "thumbnail": "/cards/thumb_004.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "005",
+      "image": "/cards/card_005.jpg",
+      "thumbnail": "/cards/thumb_005.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "006",
+      "image": "/cards/card_006.jpg",
+      "thumbnail": "/cards/thumb_006.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "007",
+      "image": "/cards/card_007.jpg",
+      "thumbnail": "/cards/thumb_007.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "008",
+      "image": "/cards/card_008.jpg",
+      "thumbnail": "/cards/thumb_008.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "009",
+      "image": "/cards/card_009.jpg",
+      "thumbnail": "/cards/thumb_009.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "010",
+      "image": "/cards/card_010.jpg",
+      "thumbnail": "/cards/thumb_010.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "011",
+      "image": "/cards/card_011.jpg",
+      "thumbnail": "/cards/thumb_011.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "012",
+      "image": "/cards/card_012.jpg",
+      "thumbnail": "/cards/thumb_012.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "013",
+      "image": "/cards/card_013.jpg",
+      "thumbnail": "/cards/thumb_013.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "014",
+      "image": "/cards/card_014.jpg",
+      "thumbnail": "/cards/thumb_014.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "015",
+      "image": "/cards/card_015.jpg",
+      "thumbnail": "/cards/thumb_015.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "016",
+      "image": "/cards/card_016.jpg",
+      "thumbnail": "/cards/thumb_016.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "017",
+      "image": "/cards/card_017.jpg",
+      "thumbnail": "/cards/thumb_017.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "018",
+      "image": "/cards/card_018.jpg",
+      "thumbnail": "/cards/thumb_018.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "019",
+      "image": "/cards/card_019.jpg",
+      "thumbnail": "/cards/thumb_019.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "020",
+      "image": "/cards/card_020.jpg",
+      "thumbnail": "/cards/thumb_020.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "021",
+      "image": "/cards/card_021.jpg",
+      "thumbnail": "/cards/thumb_021.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "022",
+      "image": "/cards/card_022.jpg",
+      "thumbnail": "/cards/thumb_022.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "023",
+      "image": "/cards/card_023.jpg",
+      "thumbnail": "/cards/thumb_023.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "024",
+      "image": "/cards/card_024.jpg",
+      "thumbnail": "/cards/thumb_024.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "025",
+      "image": "/cards/card_025.jpg",
+      "thumbnail": "/cards/thumb_025.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "026",
+      "image": "/cards/card_026.jpg",
+      "thumbnail": "/cards/thumb_026.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "027",
+      "image": "/cards/card_027.jpg",
+      "thumbnail": "/cards/thumb_027.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "028",
+      "image": "/cards/card_028.jpg",
+      "thumbnail": "/cards/thumb_028.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "029",
+      "image": "/cards/card_029.jpg",
+      "thumbnail": "/cards/thumb_029.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "030",
+      "image": "/cards/card_030.jpg",
+      "thumbnail": "/cards/thumb_030.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "031",
+      "image": "/cards/card_031.jpg",
+      "thumbnail": "/cards/thumb_031.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "032",
+      "image": "/cards/card_032.jpg",
+      "thumbnail": "/cards/thumb_032.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "033",
+      "image": "/cards/card_033.jpg",
+      "thumbnail": "/cards/thumb_033.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "034",
+      "image": "/cards/card_034.jpg",
+      "thumbnail": "/cards/thumb_034.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "035",
+      "image": "/cards/card_035.jpg",
+      "thumbnail": "/cards/thumb_035.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "036",
+      "image": "/cards/card_036.jpg",
+      "thumbnail": "/cards/thumb_036.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "037",
+      "image": "/cards/card_037.jpg",
+      "thumbnail": "/cards/thumb_037.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "038",
+      "image": "/cards/card_038.jpg",
+      "thumbnail": "/cards/thumb_038.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "039",
+      "image": "/cards/card_039.jpg",
+      "thumbnail": "/cards/thumb_039.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "040",
+      "image": "/cards/card_040.jpg",
+      "thumbnail": "/cards/thumb_040.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "041",
+      "image": "/cards/card_041.jpg",
+      "thumbnail": "/cards/thumb_041.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "042",
+      "image": "/cards/card_042.jpg",
+      "thumbnail": "/cards/thumb_042.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "043",
+      "image": "/cards/card_043.jpg",
+      "thumbnail": "/cards/thumb_043.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "044",
+      "image": "/cards/card_044.jpg",
+      "thumbnail": "/cards/thumb_044.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "045",
+      "image": "/cards/card_045.jpg",
+      "thumbnail": "/cards/thumb_045.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "046",
+      "image": "/cards/card_046.jpg",
+      "thumbnail": "/cards/thumb_046.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "047",
+      "image": "/cards/card_047.jpg",
+      "thumbnail": "/cards/thumb_047.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "048",
+      "image": "/cards/card_048.jpg",
+      "thumbnail": "/cards/thumb_048.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "049",
+      "image": "/cards/card_049.jpg",
+      "thumbnail": "/cards/thumb_049.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "050",
+      "image": "/cards/card_050.jpg",
+      "thumbnail": "/cards/thumb_050.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "051",
+      "image": "/cards/card_051.jpg",
+      "thumbnail": "/cards/thumb_051.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "052",
+      "image": "/cards/card_052.jpg",
+      "thumbnail": "/cards/thumb_052.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "053",
+      "image": "/cards/card_053.jpg",
+      "thumbnail": "/cards/thumb_053.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "054",
+      "image": "/cards/card_054.jpg",
+      "thumbnail": "/cards/thumb_054.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "055",
+      "image": "/cards/card_055.jpg",
+      "thumbnail": "/cards/thumb_055.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "056",
+      "image": "/cards/card_056.jpg",
+      "thumbnail": "/cards/thumb_056.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "057",
+      "image": "/cards/card_057.jpg",
+      "thumbnail": "/cards/thumb_057.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "058",
+      "image": "/cards/card_058.jpg",
+      "thumbnail": "/cards/thumb_058.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "059",
+      "image": "/cards/card_059.jpg",
+      "thumbnail": "/cards/thumb_059.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "060",
+      "image": "/cards/card_060.jpg",
+      "thumbnail": "/cards/thumb_060.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "061",
+      "image": "/cards/card_061.jpg",
+      "thumbnail": "/cards/thumb_061.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "062",
+      "image": "/cards/card_062.jpg",
+      "thumbnail": "/cards/thumb_062.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "063",
+      "image": "/cards/card_063.jpg",
+      "thumbnail": "/cards/thumb_063.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "064",
+      "image": "/cards/card_064.jpg",
+      "thumbnail": "/cards/thumb_064.jpg",
+      "width": 900,
+      "height": 1200
+    },
+    {
+      "id": "065",
+      "image": "/cards/card_065.jpg",
+      "thumbnail": "/cards/thumb_065.jpg",
+      "width": 900,
+      "height": 1200
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "label": "第一组",
+      "tracks": [
+        {
+          "id": "G01_A",
+          "label": "A",
+          "path": "/audio/G01_A.mp3",
+          "expectedFilename": "G01_A.mp3",
+          "title": "德彪西《月光》Clair de lune",
+          "originalTitle": "Suite bergamasque: Clair de lune",
+          "composer": "Claude Debussy",
+          "performer": "François-Joël Thiollier, piano",
+          "sourceUrl": "https://www.yourclassical.org/episode/2017/02/13/daily-download-claude-debussy--suite-bergamasque-clair-de-lune",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "7a29857451681f334656d36da3b790ddf3458df1217df017a2d98456e4301d7d",
+          "changes": "Excerpt 0.2–40.2 s; constant gain 10.6 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G01_B",
+          "label": "B",
+          "path": "/audio/G01_B.mp3",
+          "expectedFilename": "G01_B.mp3",
+          "title": "德沃夏克《斯拉夫舞曲》Op.46 No.8",
+          "originalTitle": "Slavonic Dance in G minor, Op. 46 No. 8 (B.83)",
+          "composer": "Antonín Dvořák",
+          "performer": "Indianapolis Symphony Orchestra; Fabien Sevitzky, conductor",
+          "sourceUrl": "https://taju.uniarts.fi/items/b1e1e692-99f3-46cf-a701-bd53481c4b8b",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "大学档案标注 Public Domain，但历史录音的不同地区权利尚未核实；暂不随网站发布。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "cbbfe898d04c2d8782dd00ef83810bcbb32246bbaea900f20f04ad62610b4c72",
+          "changes": "Excerpt 0.0–40.0 s; constant gain -2.06 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G01_C",
+          "label": "C",
+          "path": "/audio/G01_C.mp3",
+          "expectedFilename": "G01_C.mp3",
+          "title": "普罗科菲耶夫《骑士之舞》",
+          "originalTitle": "Romeo and Juliet, Op. 64: Dance of the Knights",
+          "composer": "Sergei Prokofiev",
+          "performer": "NYO2; Joseph Young, conductor",
+          "sourceUrl": "https://www.carnegiehall.org/Education/Programs/Link-Up/National-Program/The-Orchestra-Rocks/Dance-of-the-Knights",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "官方教育下载并未授予该录音用于本游戏网络分发的许可。",
+          "allowedOnline": false,
+          "durationSeconds": 35.0,
+          "expectedSha256": "c22dc23e2f350cc45e8371a6351f6c3d2d8e7bffe0c8a3d5750063e109074637",
+          "changes": "Excerpt 0.2–35.2 s; constant gain 6.68 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G01"
+    },
+    {
+      "id": 2,
+      "label": "第二组",
+      "tracks": [
+        {
+          "id": "G02_A",
+          "label": "A",
+          "path": "/audio/G02_A.mp3",
+          "expectedFilename": "G02_A.mp3",
+          "title": "贝多芬《月光奏鸣曲》第一乐章",
+          "originalTitle": "贝多芬《月光奏鸣曲》Op.27 No.2，第一乐章 Adagio sostenuto",
+          "composer": "Ludwig van Beethoven",
+          "performer": "Paul Pitman（钢琴）；Musopen 来源",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_sonata_no._14_in_c_sharp_minor_%27moonlight%27%2C_op._27_no._2_-_i._adagio_sostenuto.ogg",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_sonata_no._14_in_c_sharp_minor_%27moonlight%27%2C_op._27_no._2_-_i._adagio_sostenuto.ogg",
+          "licenseName": "Public-domain dedication / Musopen attribution",
+          "licenseNotes": "作者释放录音至公有领域；另保留页面要求的 Musopen 署名及链接。",
+          "allowedOnline": true,
+          "durationSeconds": 40.7,
+          "expectedSha256": "b7a0d2b0ca333df1eec2395600cd67ebff81ecfbc68befc0cf1651bee02e9193",
+          "changes": "Excerpt 4.4–45.1 s; constant gain 13.56 dB; fades 0.025 / 0.9 s; MP3 encoding.",
+          "additionalCreditUrl": "https://musopen.org/",
+          "additionalCredit": "Paul Pitman / Musopen"
+        },
+        {
+          "id": "G02_B",
+          "label": "B",
+          "path": "/audio/G02_B.mp3",
+          "expectedFilename": "G02_B.mp3",
+          "title": "布里顿《简易交响曲》第二乐章：嬉戏拨弦",
+          "originalTitle": "布里顿《简易交响曲》Op.4，第二乐章 Playful Pizzicato",
+          "composer": "Benjamin Britten",
+          "performer": "Marco Tezza 指挥；Stravinskij Chamber Orchestra；威尼斯 S. Andrea 教堂现场录音",
+          "sourceUrl": "https://www.marcotezza.com/audio-gallery/",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "演奏者网站公开试听，并未明确授权重新分发该录音；作品本身也需独立核对。",
+          "allowedOnline": false,
+          "durationSeconds": 31.1,
+          "expectedSha256": "7d0bcc18140be8ff94c16ad82dfd979b26419036b490a938d5f50985695ca24a",
+          "changes": "Excerpt 6.1–37.2 s; constant gain 2.48 dB; fades 0.025 / 0.6 s; MP3 encoding."
+        },
+        {
+          "id": "G02_C",
+          "label": "C",
+          "path": "/audio/G02_C.mp3",
+          "expectedFilename": "G02_C.mp3",
+          "title": "小约翰·施特劳斯《春之声圆舞曲》",
+          "originalTitle": "小约翰·施特劳斯《春之声圆舞曲》Op.410（管弦乐）",
+          "composer": "Johann Strauss II",
+          "performer": "Vienna Johann Strauss Orchestra；Joseph Francek 指挥（按来源页面署名）",
+          "sourceUrl": "https://www.yourclassical.org/episode/2017/03/23/daily-download-johann-strauss-ii--voices-of-spring",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 36.2,
+          "expectedSha256": "705af98bf3d4bf018067203d7dada9c9a5fe574c9fff605860e230d032d5430d",
+          "changes": "Excerpt 7.6–43.8 s; constant gain 4.88 dB; fades 0.025 / 0.9 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G02"
+    },
+    {
+      "id": 3,
+      "label": "第三组",
+      "tracks": [
+        {
+          "id": "G03_A",
+          "label": "A",
+          "path": "/audio/G03_A.mp3",
+          "expectedFilename": "G03_A.mp3",
+          "title": "贝多芬《暴风雨奏鸣曲》第三乐章",
+          "originalTitle": "Piano Sonata No. 17 in D minor, Op. 31 No. 2 “Tempest”: III. Allegretto",
+          "composer": "Ludwig van Beethoven",
+          "performer": "Stefano Ligoratti, piano",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ludwig_van_Beethoven_-_Sonata_Op._31_No._2_(The_Tempest)_-_Third_Movement.ogg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "licenseName": "CC BY-SA 4.0",
+          "licenseNotes": "署名 Stefano Ligoratti，链接来源及许可；截取、增益、淡入淡出后的音频仍以 CC BY-SA 4.0 提供。",
+          "allowedOnline": true,
+          "durationSeconds": 40.0,
+          "expectedSha256": "dd577165c20984aa22f354142c43d62d1f36f69379e22ec9692518c12a795a61",
+          "changes": "Excerpt 0.0–40.0 s; constant gain -6.89 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G03_B",
+          "label": "B",
+          "path": "/audio/G03_B.mp3",
+          "expectedFilename": "G03_B.mp3",
+          "title": "巴赫《G 弦上的咏叹调》原管弦乐版本",
+          "originalTitle": "Orchestral Suite No. 3 in D major, BWV 1068: Air",
+          "composer": "Johann Sebastian Bach",
+          "performer": "Capella Istropolitana; Jaroslav Dvořák, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2020/06/16/daily-download-johann-sebastian-bach-orchestral-suite-no-3-air",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "ad940a934d29110ae7409bbf18d5f32b350217417c559d7c25ef16353a5bbd94",
+          "changes": "Excerpt 0.2–40.2 s; constant gain 5.44 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G03_C",
+          "label": "C",
+          "path": "/audio/G03_C.mp3",
+          "expectedFilename": "G03_C.mp3",
+          "title": "肖邦《军队波兰舞曲》Op.40 No.1",
+          "originalTitle": "Polonaise in A major, Op. 40 No. 1 “Military”",
+          "composer": "Frédéric Chopin",
+          "performer": "Luis Felipe Sarro, piano (page credits Luis Sarro; file metadata credits Felipe Sarro)",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chopin_-_Polonaise_op._40_no_1.ogg",
+          "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "licenseName": "CC0 1.0",
+          "licenseNotes": "来源将此录音以 CC0 1.0 释放，保留演奏者及来源记录。",
+          "allowedOnline": true,
+          "durationSeconds": 40.0,
+          "expectedSha256": "2476c9d578e49da6fe8dcbab58319423595da409b4d85fd6a8a1977adf7f9002",
+          "changes": "Excerpt 0.0–40.0 s; constant gain -3.9 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G03"
+    },
+    {
+      "id": 4,
+      "label": "第四组",
+      "tracks": [
+        {
+          "id": "G04_A",
+          "label": "A",
+          "path": "/audio/G04_A.mp3",
+          "expectedFilename": "G04_A.mp3",
+          "title": "格里格《在山魔王的宫殿里》",
+          "originalTitle": "Peer Gynt: In the Hall of the Mountain King",
+          "composer": "Edvard Grieg",
+          "performer": "Malmö Symphony Orchestra; Bjarte Engeset, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2017/02/02/daily-download-edvard-grieg--peer-gynt-in-the-hall-of-the-mountain-king",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "0d35f975a891b95788e1f3a2a7246ad9d4301a8d1fb09c25c281bf2a1fb3ab50",
+          "changes": "Excerpt 60.0–100.0 s; constant gain 8.28 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G04_B",
+          "label": "B",
+          "path": "/audio/G04_B.mp3",
+          "expectedFilename": "G04_B.mp3",
+          "title": "格里格《晨景》",
+          "originalTitle": "Peer Gynt Suite No. 1: Morning Mood",
+          "composer": "Edvard Grieg",
+          "performer": "Malmö Symphony Orchestra; Bjarte Engeset, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2016/06/21/daily-download-edvard-grieg--peer-gynt-suite-no-1-morning-mood",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "e878a18b730ac625eb6295c040b65528939c5ac57db1a5b8484e71c900bd8864",
+          "changes": "Excerpt 1.2–41.2 s; constant gain 12.4 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G04_C",
+          "label": "C",
+          "path": "/audio/G04_C.mp3",
+          "expectedFilename": "G04_C.mp3",
+          "title": "莫扎特《安魂曲》：Lacrimosa",
+          "originalTitle": "Requiem in D minor, K.626: Lacrimosa",
+          "composer": "Wolfgang Amadeus Mozart",
+          "performer": "Wiener Philharmoniker and Wiener Singverein; Herbert von Karajan, conductor (Salzburg Festival, 24 August 1960)",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:W._A._Mozart_-_Requiem_-_8._Lacrimosa_(Herbert_von_Karajan,_Wiener_Philharmoniker,_Wiener_Singverein,_1960).ogg",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "页面的公有领域说明基于欧盟录音年限，不能据此确认其他地区的分发权。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "255d1671ab32427b82a6441e806ae113538eaf72f8e4a83a726f85b26467d9f4",
+          "changes": "Excerpt 18.3–58.3 s; constant gain -6.02 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G04"
+    },
+    {
+      "id": 5,
+      "label": "第五组",
+      "tracks": [
+        {
+          "id": "G05_A",
+          "label": "A",
+          "path": "/audio/G05_A.mp3",
+          "expectedFilename": "G05_A.mp3",
+          "title": "圣桑《动物狂欢节》：水族馆",
+          "originalTitle": "The Carnival of the Animals: Aquarium",
+          "composer": "Camille Saint-Saëns",
+          "performer": "Slovak Radio Symphony Orchestra; Ondrej Lenárd, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2018/02/12/daily-download-camille-saintsaens--carnival-of-the-animals-aquarium",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "ab4f6daa38a3c347ba5f4da46eda632950d48fe4a86bea913eee3ee4c168789f",
+          "changes": "Excerpt 0.2–40.2 s; constant gain 14.04 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G05_B",
+          "label": "B",
+          "path": "/audio/G05_B.mp3",
+          "expectedFilename": "G05_B.mp3",
+          "title": "罗西尼《威廉·退尔》序曲：终段疾驰",
+          "originalTitle": "Guillaume Tell (William Tell): Overture — finale gallop",
+          "composer": "Gioachino Rossini",
+          "performer": "Prague Sinfonia Orchestra; Christian Benda, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2021/01/05/daily-download-gioacchino-rossini--guillaume-tell-william-tell-overture",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 42.0,
+          "expectedSha256": "47a152690c6e92844e499b626c667aa2e955362dc9097838e44c1745eba86d83",
+          "changes": "Excerpt 510.0–552.0 s; constant gain -4.04 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G05_C",
+          "label": "C",
+          "path": "/audio/G05_C.mp3",
+          "expectedFilename": "G05_C.mp3",
+          "title": "巴赫《第一无伴奏大提琴组曲》前奏曲",
+          "originalTitle": "Cello Suite No. 1 in G major, BWV 1007: Prelude",
+          "composer": "Johann Sebastian Bach",
+          "performer": "Estelle Revaz, solo cello",
+          "sourceUrl": "https://www.yourclassical.org/episode/2017/04/04/daily-download-js-bach--cello-suite-no-1-prelude",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "c994a0e6bbb88afc61e2fd3e99a1204d9c1b889cf4edf7c6ec1ae29fbad71d5c",
+          "changes": "Excerpt 0.65–40.65 s; constant gain 2.95 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G05"
+    },
+    {
+      "id": 6,
+      "label": "第六组",
+      "tracks": [
+        {
+          "id": "G06_A",
+          "label": "A",
+          "path": "/audio/G06_A.mp3",
+          "expectedFilename": "G06_A.mp3",
+          "title": "柴可夫斯基《糖梅仙子之舞》",
+          "originalTitle": "The Nutcracker Suite: Dance of the Sugar Plum Fairy",
+          "composer": "Pyotr Ilyich Tchaikovsky",
+          "performer": "National Symphony Orchestra of London; Stanford Robinson, conductor",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:PDP-CH_-_National_Symphony_Orchestra_of_London_-_Stanford_Robinson,_conductor_-_The_Nutcracker_Suite,_Op._71_-_Dance_of_the_Sugar_Plum_Fairy_-_Russian_Dance_-_Tchaikovsky_-_Decca-k1142-ar9057.flac",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "1945 年历史录音，来源也指出缺少美国公有领域标签；暂不随网站发布。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "5b490e4af0888f49f3f1d3eff0b5a27a66c2c3f0dd4f87b58b25231fdc59afd9",
+          "changes": "Excerpt 11.5–51.5 s; constant gain 7.42 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G06_B",
+          "label": "B",
+          "path": "/audio/G06_B.mp3",
+          "expectedFilename": "G06_B.mp3",
+          "title": "霍尔斯特《行星组曲》：火星",
+          "originalTitle": "The Planets, Op. 32: Mars, the Bringer of War",
+          "composer": "Gustav Holst",
+          "performer": "TMO Orchestra (Incheon performance, 2023)",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Holst_-_The_Planets_-_Mars,_The_Bringer_of_War_(TMO_Orchestra,_Incheon,_2023).opus",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+          "licenseName": "CC BY 3.0",
+          "licenseNotes": "署名 Gyeonggi Arts Center Grand Theater TMO Orchestra，链接原视频、来源及许可，并说明音频处理。",
+          "allowedOnline": true,
+          "durationSeconds": 42.0,
+          "expectedSha256": "0912fd2f82c0a4d5951408a275c482f9c1c006e2349c21b971df0709447d0deb",
+          "changes": "Excerpt 90.0–132.0 s; constant gain -11.13 dB; fades 0.025 / 0.8 s; MP3 encoding.",
+          "additionalCreditUrl": "https://www.youtube.com/watch?v=losG9W_PUHc",
+          "additionalCredit": "Gyeonggi Arts Center Grand Theater TMO Orchestra"
+        },
+        {
+          "id": "G06_C",
+          "label": "C",
+          "path": "/audio/G06_C.mp3",
+          "expectedFilename": "G06_C.mp3",
+          "title": "帕格尼尼《第 24 首随想曲》",
+          "originalTitle": "24 Caprices for Solo Violin, Op. 1: No. 24 in A minor",
+          "composer": "Niccolò Paganini",
+          "performer": "Ruggiero Ricci, solo violin",
+          "sourceUrl": "https://archive.org/details/RuggieroRicci-PaganiniCaprices",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "上传者的 Public Domain Classic 标注及日本到期说明不足以确认网站分发权。",
+          "allowedOnline": false,
+          "durationSeconds": 44.25,
+          "expectedSha256": "835dccae920cd9d850b2bb0f83d758f1d54d53c453e549e6658d6ea5d568a672",
+          "changes": "Excerpt 0.85–45.1 s; constant gain 2.6 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G06"
+    },
+    {
+      "id": 7,
+      "label": "第七组",
+      "tracks": [
+        {
+          "id": "G07_A",
+          "label": "A",
+          "path": "/audio/G07_A.mp3",
+          "expectedFilename": "G07_A.mp3",
+          "title": "圣桑《骷髅之舞》",
+          "originalTitle": "Danse macabre, Op. 40",
+          "composer": "Camille Saint-Saëns",
+          "performer": "Malmö Symphony Orchestra; Marc Soustrot, conductor; Marika Fältskogh, violin",
+          "sourceUrl": "https://www.yourclassical.org/episode/2015/09/16/daily-download-camille-saintsaens--danse-macabre",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 42.0,
+          "expectedSha256": "a23a98d812c263f4e268497c828e2436a4e7db15a54f55ac413b7bd174e65f20",
+          "changes": "Excerpt 28.9–70.9 s; constant gain 13.14 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G07_B",
+          "label": "B",
+          "path": "/audio/G07_B.mp3",
+          "expectedFilename": "G07_B.mp3",
+          "title": "亨德尔《祭司扎多克》",
+          "originalTitle": "Zadok the Priest, HWV 258",
+          "composer": "George Frideric Handel",
+          "performer": "St Matthew’s Concert Choir and Orchestra; Damien Giromella, director",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Handel_-_Zadok_the_Priest,_HWV_258_(St_Matthew's_Concert_Choir,_Giromella).oga",
+          "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+          "licenseName": "CC BY 3.0",
+          "licenseNotes": "署名 St Matthew’s Concert Choir and Orchestra / Damien Giromella，链接来源及许可，并说明音频处理。",
+          "allowedOnline": true,
+          "durationSeconds": 35.0,
+          "expectedSha256": "09da13675dd55e4c6e1f1497a0736c042508162df30796471787df0831dc1176",
+          "changes": "Excerpt 93.5–128.5 s; constant gain -4.91 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G07_C",
+          "label": "C",
+          "path": "/audio/G07_C.mp3",
+          "expectedFilename": "G07_C.mp3",
+          "title": "塔雷加《阿尔罕布拉宫的回忆》",
+          "originalTitle": "Recuerdos de la Alhambra",
+          "composer": "Francisco Tárrega",
+          "performer": "Carlo Alberto Boni, solo guitar",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Recuerdos_de_la_Alhambra.ogg",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "licenseName": "CC BY-SA 3.0",
+          "licenseNotes": "署名 Carlo Alberto Boni，链接来源及许可；截取、增益、淡入淡出后的音频仍以 CC BY-SA 3.0 提供。",
+          "allowedOnline": true,
+          "durationSeconds": 42.0,
+          "expectedSha256": "bc1337458b6b1c46a441c1ae910061c9b187c97ef4ec2f7823ebc6c1c3266068",
+          "changes": "Excerpt 1.4–43.4 s; constant gain -3.51 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G07"
+    },
+    {
+      "id": 8,
+      "label": "第八组",
+      "tracks": [
+        {
+          "id": "G08_A",
+          "label": "A",
+          "path": "/audio/G08_A.mp3",
+          "expectedFilename": "G08_A.mp3",
+          "title": "杜卡《魔法师的学徒》",
+          "originalTitle": "The Sorcerer’s Apprentice — bassoon broom/work theme",
+          "composer": "Paul Dukas",
+          "performer": "RTÉ National Symphony Orchestra; Jean-Luc Tingaud, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2016/10/31/daily-download-paul-dukas--the-sorcerers-apprentice",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 42.0,
+          "expectedSha256": "c1588c92aff61c5b7ba969f8cb5fd69c0f2011f9a81c11d283d2593509b4ce1c",
+          "changes": "Excerpt 133.5–175.5 s; constant gain 10.67 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G08_B",
+          "label": "B",
+          "path": "/audio/G08_B.mp3",
+          "expectedFilename": "G08_B.mp3",
+          "title": "斯美塔那《伏尔塔瓦河》",
+          "originalTitle": "Vltava (The Moldau), from Má vlast — river theme",
+          "composer": "Bedřich Smetana",
+          "performer": "Polish National Radio Symphony Orchestra; Antoni Wit, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2017/05/29/daily-download-bedrich-smetana--the-moldau",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 42.0,
+          "expectedSha256": "38bdb0f3d5fcc04a5859133c2f8e5f17fa438bd09ef602c975df0ffb88821e30",
+          "changes": "Excerpt 67.0–109.0 s; constant gain 2.45 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G08_C",
+          "label": "C",
+          "path": "/audio/G08_C.mp3",
+          "expectedFilename": "G08_C.mp3",
+          "title": "巴赫《D 小调托卡塔》BWV 565",
+          "originalTitle": "Toccata and Fugue in D minor, BWV 565 — opening toccata",
+          "composer": "Johann Sebastian Bach",
+          "performer": "James Kibbie, pipe organ",
+          "sourceUrl": "https://freemusicarchive.org/music/James_Kibbie/Bach_Organ_Works_Fantasias_and_Fugues_Toccatas_and_Fugues/BWV0565/",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "CC BY-NC-ND 3.0 未明确准许重新分发当前经过截取和淡入淡出处理的选段。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "bdf3333bdd7ca798dfb146c48a42213a7f5d718a530995ed2d09e804f41fb047",
+          "changes": "Excerpt 0.35–40.35 s; constant gain -3.78 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G08"
+    },
+    {
+      "id": 9,
+      "label": "第九组",
+      "tracks": [
+        {
+          "id": "G09_A",
+          "label": "A",
+          "path": "/audio/G09_A.mp3",
+          "expectedFilename": "G09_A.mp3",
+          "title": "维瓦尔第《四季》：冬，第一乐章",
+          "originalTitle": "The Four Seasons: Winter, RV 297 — I. Allegro non molto",
+          "composer": "Antonio Vivaldi",
+          "performer": "John Harrison, violin; Wichita State University Chamber Players; Robert Turizziani, conductor",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:Vivaldi_-_Four_Seasons_4_Winter_mvt_1_Allegro_non_molto_-_John_Harrison_violin.oga",
+          "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+          "licenseName": "CC BY-SA 4.0",
+          "licenseNotes": "从原页多版本授权选择 CC BY-SA 4.0；署名 John Harrison / Wichita State University Chamber Players / Robert Turizziani，并说明音频处理。",
+          "allowedOnline": true,
+          "durationSeconds": 45.0,
+          "expectedSha256": "cf125d007e6259703c761faf0081c81dadafa1a491623a31ff4564941d97414e",
+          "changes": "Excerpt 0.25–45.25 s; constant gain 6.64 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G09_B",
+          "label": "B",
+          "path": "/audio/G09_B.mp3",
+          "expectedFilename": "G09_B.mp3",
+          "title": "德沃夏克《自新大陆》第九交响曲第二乐章",
+          "originalTitle": "Symphony No. 9 “From the New World” — II. Largo, English-horn theme",
+          "composer": "Antonín Dvořák",
+          "performer": "Baltimore Symphony Orchestra; Marin Alsop, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2016/10/17/daily-download-antonin-dvorak--symphony-no-9-ii-largo",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 42.0,
+          "expectedSha256": "6e227dc195dd56e51c23e3359a5c6947e936e382bad7244e96654077a34af9fc",
+          "changes": "Excerpt 27.4–69.4 s; constant gain 17.1 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G09_C",
+          "label": "C",
+          "path": "/audio/G09_C.mp3",
+          "expectedFilename": "G09_C.mp3",
+          "title": "乔普林《演艺人》",
+          "originalTitle": "The Entertainer — first piano theme",
+          "composer": "Scott Joplin",
+          "performer": "Wikimedia Commons contributor IE, live solo digital piano performance",
+          "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Entertainer_-_Scott_Joplin.ogg",
+          "licenseUrl": "https://commons.wikimedia.org/wiki/File:The_Entertainer_-_Scott_Joplin.ogg",
+          "licenseName": "Public-domain dedication",
+          "licenseNotes": "演奏者 IE 将本人录音释放至公有领域，或在不能有效释放的地区授予任何用途的许可。",
+          "allowedOnline": true,
+          "durationSeconds": 40.0,
+          "expectedSha256": "5f5751248b24bda99a0c539b2506cac82c53802e27e3d27bc38d238304d32602",
+          "changes": "Excerpt 8.7–48.7 s; constant gain -5.45 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G09"
+    },
+    {
+      "id": 10,
+      "label": "第十组",
+      "tracks": [
+        {
+          "id": "G10_A",
+          "label": "A",
+          "path": "/audio/G10_A.mp3",
+          "expectedFilename": "G10_A.mp3",
+          "title": "舒伯特《魔王》D 328",
+          "originalTitle": "Erlkönig, D 328 — opening narrator passage",
+          "composer": "Franz Schubert",
+          "performer": "Johannes Kalpers, tenor; Burkhard Kehring, piano",
+          "sourceUrl": "https://www.yourclassical.org/story/2020/10/26/daily-download-franz-schubert--der-erlkonig",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 40.0,
+          "expectedSha256": "f0500e14c17a4b6a9ce248b851cec747e7d20cde299ed9edd57478ae8a0266f1",
+          "changes": "Excerpt 18.0–58.0 s; constant gain 1.32 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G10_B",
+          "label": "B",
+          "path": "/audio/G10_B.mp3",
+          "expectedFilename": "G10_B.mp3",
+          "title": "拉威尔《波莱罗》",
+          "originalTitle": "Boléro — early woodwind theme over snare",
+          "composer": "Maurice Ravel",
+          "performer": "Slovak Radio Symphony Orchestra; Kenneth Jean, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2019/02/14/daily-download-maurice-ravel--bolero",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 50.0,
+          "expectedSha256": "3c0e73dba0cd4276eff3991d1da7d8c823729cb6bb9e99929a51b858316178c3",
+          "changes": "Excerpt 12.0–62.0 s; constant gain 32.69 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        },
+        {
+          "id": "G10_C",
+          "label": "C",
+          "path": "/audio/G10_C.mp3",
+          "expectedFilename": "G10_C.mp3",
+          "title": "德利布《拉克美》：花之二重唱",
+          "originalTitle": "Lakmé — Flower Duet (Dôme épais, le jasmin)",
+          "composer": "Léo Delibes",
+          "performer": "Adriana Kohútková, soprano; Denisa Šlepkovská, mezzo-soprano; Slovak Radio Symphony Orchestra; Johannes Wildner, conductor",
+          "sourceUrl": "https://www.yourclassical.org/episode/2016/01/21/daily-download-leo-delibes--lakme-flower-duet",
+          "licenseUrl": null,
+          "licenseName": "Not cleared for online distribution",
+          "licenseNotes": "YourClassical 免费下载仅用于个人聆听，现有记录未提供本游戏的网络再分发许可。",
+          "allowedOnline": false,
+          "durationSeconds": 42.0,
+          "expectedSha256": "43a8b235c2c44e4f2ffadba7218e1ec6c7e6cfcee8e0f8fdd814f21e3fa7c9e8",
+          "changes": "Excerpt 10.15–52.15 s; constant gain 1.11 dB; fades 0.025 / 0.8 s; MP3 encoding."
+        }
+      ],
+      "fullyIncluded": true,
+      "key": "G10"
+    }
+  ],
+  "onlineTrackIds": [
+    "G01_A",
+    "G01_B",
+    "G01_C",
+    "G02_A",
+    "G02_B",
+    "G02_C",
+    "G03_A",
+    "G03_B",
+    "G03_C",
+    "G04_A",
+    "G04_B",
+    "G04_C",
+    "G05_A",
+    "G05_B",
+    "G05_C",
+    "G06_A",
+    "G06_B",
+    "G06_C",
+    "G07_A",
+    "G07_B",
+    "G07_C",
+    "G08_A",
+    "G08_B",
+    "G08_C",
+    "G09_A",
+    "G09_B",
+    "G09_C",
+    "G10_A",
+    "G10_B",
+    "G10_C"
+  ],
+  "quickTestGroups": [
+    {
+      "id": "online-1",
+      "label": "在线试奏一",
+      "trackIds": [
+        "G02_A",
+        "G09_A",
+        "G09_C"
+      ]
+    },
+    {
+      "id": "online-2",
+      "label": "在线试奏二",
+      "trackIds": [
+        "G03_A",
+        "G07_B",
+        "G07_C"
+      ]
+    },
+    {
+      "id": "online-3",
+      "label": "在线试奏三",
+      "trackIds": [
+        "G03_C",
+        "G06_B",
+        "G02_A"
+      ]
+    }
+  ]
+}
