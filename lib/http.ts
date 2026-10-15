@@ -2,7 +2,8 @@ import { GameError } from "./game";
 export function json(value: unknown, status = 200) { return Response.json(value, { status, headers: { "Cache-Control": "no-store, private", "Vary": "Authorization", "X-Content-Type-Options": "nosniff" } }); }
 export function failure(error: unknown) {
   if (error instanceof GameError) return json({ error: error.message }, error.status);
-  console.error("Jukebox request failed", error instanceof Error ? error.message : "unknown error");
+  const message = error instanceof Error ? error.message : "unknown error";
+  console.error("Jukebox request failed", message.replace(/Bearer\s+\S+/gi, "Bearer [redacted]"));
   return json({ error: "服务暂时无法完成操作，请稍后重试。" }, 500);
 }
 export async function bodyOf(request: Request): Promise<Record<string, unknown>> {

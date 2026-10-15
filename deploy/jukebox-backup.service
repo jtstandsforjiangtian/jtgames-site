@@ -1,0 +1,13 @@
+[Unit]
+Description=Jukebox SQLite backup
+After=docker.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+User=ubuntu
+Group=ubuntu
+SupplementaryGroups=docker
+WorkingDirectory=/srv/jukebox/app
+ExecStart=/bin/bash /srv/jukebox/app/deploy/backup.sh
+ExecStartPost=/usr/bin/find /srv/jukebox/backups -name jukebox-*.sqlite -mtime +14 -delete

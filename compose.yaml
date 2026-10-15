@@ -1,0 +1,53 @@
+name: jukebox
+
+services:
+  app:
+    image: jukebox:current
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      HOSTNAME: 0.0.0.0
+      PORT: "3000"
+      JUKEBOX_DB_PATH: /data/jukebox.sqlite
+      NODE_OPTIONS: --disable-warning=ExperimentalWarning
+    volumes:
+      - ${JUKEBOX_DATA_DIR:-/srv/jukebox/data}:/data
+      - ${JUKEBOX_BACKUP_DIR:-/srv/jukebox/backups}:/backups
+    expose:
+      - "3000"
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/api/health').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 15s
+      timeout: 5s
+      retries: 8
+      start_period: 25s
+    mem_limit: 1400m
+    networks:
+      - web
+
+  caddy:
+    image: caddy:2.10
+    restart: unless-stopped
+    depends_on:
+      app:
+        condition: service_healthy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    mem_limit: 256m
+    networks:
+      - web
+
+networks:
+  web:
+
+volumes:
+  caddy_data:
+  caddy_config:

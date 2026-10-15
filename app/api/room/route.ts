@@ -1,6 +1,10 @@
 import { actRoom, enterRoom, getRoom } from "@/lib/store";
 import { bodyOf, failure, json, tokenOf } from "@/lib/http";
 import { GameError } from "@/lib/game";
+
+export const runtime = "nodejs";
+export const dynamic = "force-dynamic";
+
 const codeOf = (request: Request) => (new URL(request.url).searchParams.get("code") || "").toUpperCase();
 export async function GET(request: Request) {
   try { return json({ room: await getRoom(codeOf(request), tokenOf(request)) }); } catch (e) { return failure(e); }

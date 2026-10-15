@@ -1,0 +1,16 @@
+.git
+.next
+node_modules
+data
+backups
+.env
+.env.*
+!.env.example
+.wrangler
+.sites-runtime
+coverage
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+*.md
+!DEPLOY_CN.md

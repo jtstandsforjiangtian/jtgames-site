@@ -1,0 +1,23 @@
+jtmakegames.com {
+	header {
+		Strict-Transport-Security "max-age=31536000; includeSubDomains"
+		X-Content-Type-Options "nosniff"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		X-Frame-Options "SAMEORIGIN"
+		-Server
+	}
+	@static path /audio/* /cards/*
+	handle @static {
+		reverse_proxy app:3000 {
+			header_down Cache-Control "public, max-age=2592000"
+		}
+	}
+	handle {
+		encode zstd gzip
+		reverse_proxy app:3000
+	}
+}
+
+www.jtmakegames.com {
+	redir https://jtmakegames.com{uri} permanent
+}
