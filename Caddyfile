@@ -1,4 +1,12 @@
-jtmakegames.com {
+# 生产环境不设任何环境变量，占位符取默认值，与原配置一致。
+# 本地预览用同一个文件：deploy/preview-site.sh 会设置 SITE_ADDRESS / WWW_ADDRESS / APP_UPSTREAM / SUSHI_ROOT。
+#
+# 路径分工：
+#   /            作品主页（Next.js）
+#   /jukebox/    Jukebox（Next.js；/api/*、/audio/*、/cards/* 仍在站点根）
+#   /sushi/      寿司店 Demo（静态文件，由 deploy/sync-sushi.sh 生成的发布副本）
+
+{$SITE_ADDRESS:jtmakegames.com} {
 	header {
 		Strict-Transport-Security "max-age=31536000; includeSubDomains"
 		X-Content-Type-Options "nosniff"
@@ -6,18 +14,33 @@ jtmakegames.com {
 		X-Frame-Options "SAMEORIGIN"
 		-Server
 	}
+
+	# 游戏入口统一带斜杠，相对资源才能正确解析。
+	redir /sushi /sushi/ 301
+	redir /jukebox /jukebox/ 301
+
+	# 寿司店：直接从发布目录提供文件。缺失资源由 file_server 返回 404，不会落到 Next 的 HTML。
+	# current 是指向 releases/<版本> 的相对符号链接，切换版本即整套原子替换。
+	handle_path /sushi/* {
+		root * {$SUSHI_ROOT:/srv/sushi/current}
+		encode zstd gzip
+		# HTML/JS/CSS 没有内容哈希，不长期强缓存；浏览器每次用 ETag 重新验证。
+		header Cache-Control "no-cache"
+		file_server
+	}
+
 	@static path /audio/* /cards/*
 	handle @static {
-		reverse_proxy app:3000 {
+		reverse_proxy {$APP_UPSTREAM:app:3000} {
 			header_down Cache-Control "public, max-age=2592000"
 		}
 	}
 	handle {
 		encode zstd gzip
-		reverse_proxy app:3000
+		reverse_proxy {$APP_UPSTREAM:app:3000}
 	}
 }
 
-www.jtmakegames.com {
+{$WWW_ADDRESS:www.jtmakegames.com} {
 	redir https://jtmakegames.com{uri} permanent
 }

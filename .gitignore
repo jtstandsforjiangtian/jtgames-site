@@ -33,6 +33,9 @@ yarn-error.log*
 .env.*
 !.env.example
 
+# 寿司店 Demo 的本地发布副本（由 deploy/sync-sushi.sh 从 Git 提交导出，可随时重建）
+/.sushi-release/
+
 # runtime database
 /data/
 *.sqlite

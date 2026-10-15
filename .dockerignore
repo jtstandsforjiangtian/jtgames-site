@@ -8,6 +8,7 @@ backups
 !.env.example
 .wrangler
 .sites-runtime
+.sushi-release
 coverage
 *.sqlite
 *.sqlite-wal

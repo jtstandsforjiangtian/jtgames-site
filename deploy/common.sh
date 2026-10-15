@@ -2,6 +2,8 @@
 APP_DIR=/srv/jukebox/app
 DATA_DIR=/srv/jukebox/data
 BACKUP_DIR=/srv/jukebox/backups
+# 寿司店 Demo 发布目录：releases/<版本>/ 加相对符号链接 current，只读挂进 Caddy 容器。
+SUSHI_DIR=/srv/jukebox/sushi
 COMPOSE=(docker compose --project-directory "$APP_DIR" -f "$APP_DIR/compose.yaml")
 
 require_server_layout() {
@@ -13,6 +15,9 @@ require_server_layout() {
   # 容器内应用用户是 1001，宿主机管理用户属于 ubuntu 组。目录可写，备份文件可被定时任务清理。
   sudo chown 1001:ubuntu "$DATA_DIR" "$BACKUP_DIR"
   sudo chmod 2775 "$DATA_DIR" "$BACKUP_DIR"
+  # 寿司发布目录由管理用户写入（rsync + 切换符号链接），Caddy 只读。
+  sudo mkdir -p "$SUSHI_DIR/releases"
+  sudo chown -R "$(id -un):$(id -gn)" "$SUSHI_DIR"
 }
 
 print_machine() {

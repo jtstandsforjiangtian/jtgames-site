@@ -41,6 +41,53 @@ curl -sI --max-time 20 https://www.jtmakegames.com/ | head
 
 第一条应返回首页的 HTTPS 响应，第二条应跳到 `https://jtmakegames.com/`。
 
+## 站点路径
+
+| 路径 | 内容 | 由谁提供 |
+| --- | --- | --- |
+| `/` | JT Games 作品主页 | Next.js（`app/page.tsx`） |
+| `/jukebox/` | Jukebox | Next.js（`app/jukebox/page.tsx`） |
+| `/sushi/` | 寿司店 Demo | Caddy 直接提供 `/srv/jukebox/sushi/current/` 里的静态文件 |
+| `/api/*`、`/audio/*`、`/cards/*` | Jukebox 接口与素材 | Next.js，位置不变 |
+
+- `/jukebox` 和 `/sushi` 都由 Caddy 301 到带斜杠的地址。Next 自身不做斜杠跳转（`skipTrailingSlashRedirect`），否则 `/api/*` 每次请求都会多一跳。
+- 迁移前的邀请链接 `https://jtmakegames.com/?room=CODE` 由 Next 307 到 `/jukebox/?room=CODE`，老链接继续可用。新的邀请链接直接生成为 `/jukebox/?room=CODE`。
+- `/sushi/` 下缺失的 JS/CSS 由 Caddy 的 `file_server` 返回 404，不会落到 Next 的 HTML 404 页。HTML/JS/CSS 带 `Cache-Control: no-cache`，浏览器用 ETag 重新验证，发布新版后不会混用旧文件。
+- 两个游戏里都没有 service worker；Jukebox 的 `/audio/*`、`/cards/*` 长缓存设置不变。
+
+## 发布寿司店 Demo
+
+寿司源码只在 GitHub 仓库 `jtstandsforjiangtian/sushi-auto-demo`（私有，`dist/` 即源码，无构建步骤）维护，本项目不保存第二份可编辑的寿司源码。发布副本由脚本从某个 Git 提交导出：
+
+```bash
+cd /Users/jt/Projects/jukebox
+JUKEBOX_SSH_KEY="$HOME/.ssh/jukebox_deploy.pem" ./deploy/publish-sushi.sh ubuntu@124.156.136.248 main
+```
+
+最后一个参数可以换成标签或提交号。脚本在 Mac 上执行 `deploy/sync-sushi.sh`：从 GitHub（SSH）取该提交，运行寿司仓库的 `npm test`，把 `dist/` 导出为 `.sushi-release/releases/<提交短号>/` 并写入 `sushi-version.json`（含完整提交号）；然后只把这一版 rsync 到服务器 `/srv/jukebox/sushi/releases/<提交短号>/`，再在服务器上把相对符号链接 `current` 原子切换过去。Caddy 不需要重载，Jukebox 容器、数据库和证书都不受影响。
+
+- 当前线上版本：打开 `https://jtmakegames.com/sushi/sushi-version.json`，或看服务器上的 `/srv/jukebox/sushi/RELEASES.log`。
+- 回滚：`ssh` 到服务器后执行 `bash /srv/jukebox/app/deploy/sync-sushi.sh --dest /srv/jukebox/sushi --activate <旧短号>`。默认保留最近 5 个版本。
+- 首次启用：先用 `./deploy/publish.sh ... update` 发布本次 Next/Caddy 改动（`compose.yaml` 新增了 `/srv/jukebox/sushi` 到 Caddy 容器的只读挂载，`update.sh` 会重建 Caddy 容器），再执行 `publish-sushi.sh`。顺序反过来也可以，只是中间 `/sushi/` 会短暂 404。
+
+## 本地预览整站
+
+Mac 没有 Docker，用 Homebrew 的 Caddy 和同一份 `Caddyfile` 预览（`Caddyfile` 中的 `{$变量:默认值}` 在生产环境不设任何变量时取默认值，与原配置一致）：
+
+```bash
+brew install caddy                 # 只需一次
+pnpm build && pnpm start           # 终端 1：Next 独立服务，监听 127.0.0.1:3000
+./deploy/preview-site.sh           # 终端 2：Caddy 监听 http://127.0.0.1:8080
+```
+
+`preview-site.sh` 第一次会自动执行 `deploy/sync-sushi.sh main` 生成 `.sushi-release/`（已在 `.gitignore`、`.dockerignore` 和 `publish.sh` 的排除列表中）。换寿司版本：`SUSHI_REF=<提交或标签> bash deploy/sync-sushi.sh`，Caddy 无需重启。然后：
+
+```bash
+node scripts/verify-running.mjs http://127.0.0.1:8080
+```
+
+该脚本会检查主页、`/jukebox/`、旧邀请链接跳转、素材，以及 `/sushi/` 的 MIME 类型、404 行为和 `/sushi` → `/sushi/` 跳转（只对着 Next 的 3000 端口跑时会跳过寿司部分）。
+
 ## 目录和持久化
 
 | 路径 | 内容 |
@@ -48,6 +95,7 @@ curl -sI --max-time 20 https://www.jtmakegames.com/ | head
 | `/srv/jukebox/app` | 发布文件、`compose.yaml`、`Caddyfile`、`.env` |
 | `/srv/jukebox/data` | SQLite 数据库。容器内路径是 `/data/jukebox.sqlite` |
 | `/srv/jukebox/backups` | 一致性备份 |
+| `/srv/jukebox/sushi` | 寿司店 Demo 发布副本：`releases/<提交短号>/`、符号链接 `current`、`RELEASES.log`。只读挂进 Caddy 容器的 `/srv/sushi` |
 
 证书在 Docker 卷 `jukebox_caddy_data` 和 `jukebox_caddy_config`。不要执行 `docker compose down -v`。
 
@@ -87,7 +135,7 @@ cd /Users/jt/Projects/jukebox
 JUKEBOX_SSH_KEY="$HOME/.ssh/jukebox_deploy.pem" ./deploy/publish.sh ubuntu@124.156.136.248 update
 ```
 
-服务器会先备份数据库，把当前镜像标为 `jukebox:previous`，再重建应用容器。数据库目录、备份目录和证书卷都保留。新版本健康检查失败时，脚本会尝试切回上一版镜像。
+服务器会先备份数据库，把当前镜像标为 `jukebox:previous`，再重建应用容器。数据库目录、备份目录、证书卷和寿司发布目录都保留。新版本健康检查失败时，脚本会尝试切回上一版镜像。只更新寿司店 Demo 时不用这条命令，见上文「发布寿司店 Demo」。
 
 只在服务器上重新构建、不从 Mac 同步文件时：
 

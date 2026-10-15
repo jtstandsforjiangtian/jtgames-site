@@ -43,7 +43,25 @@ if (resumePath) {
 const health = await fetch(new URL("/api/health", base));
 if (!health.ok) throw new Error("health check failed");
 const home = await fetch(base);
-if (!home.ok || !(await home.text()).includes("你听到了什么？")) throw new Error("homepage missing");
+if (!home.ok || !(await home.text()).includes("JT Games")) throw new Error("portfolio homepage missing");
+const jukebox = await fetch(new URL("/jukebox/", base));
+if (!jukebox.ok || !(await jukebox.text()).includes("你听到了什么？")) throw new Error("jukebox page missing at /jukebox/");
+const legacyInvite = await fetch(new URL("/?room=ABCD23", base), { redirect: "manual" });
+if (!(legacyInvite.status === 307 || legacyInvite.status === 308) || !legacyInvite.headers.get("location")?.includes("/jukebox/?room=ABCD23")) throw new Error("legacy /?room= invite link no longer reaches Jukebox");
+// 寿司店由 Caddy 直接提供；只对着 Next 本身测试时这里是 404，跳过即可。
+const sushi = await fetch(new URL("/sushi/", base));
+if (sushi.ok) {
+  if (!(await sushi.text()).includes("寿司工坊")) throw new Error("/sushi/ is not the sushi demo");
+  const sushiScript = await fetch(new URL("/sushi/sim.js", base));
+  if (!sushiScript.ok || !/javascript/.test(sushiScript.headers.get("content-type") || "")) throw new Error("/sushi/sim.js missing or wrong MIME type");
+  const sushiMissing = await fetch(new URL("/sushi/definitely-missing.js", base));
+  if (sushiMissing.status !== 404 || /text\/html/.test(sushiMissing.headers.get("content-type") || "")) throw new Error("missing sushi asset should be a bare 404, not an HTML fallback");
+  const sushiNoSlash = await fetch(new URL("/sushi", base), { redirect: "manual" });
+  if (sushiNoSlash.status < 300 || sushiNoSlash.status > 399 || !sushiNoSlash.headers.get("location")?.endsWith("/sushi/")) throw new Error("/sushi should redirect to /sushi/");
+  console.log("PASS /sushi/ serves the sushi demo with JS MIME types, bare 404s and a /sushi -> /sushi/ redirect");
+} else {
+  console.log("SKIP /sushi/ not served here (expected when testing Next without Caddy)");
+}
 
 const catalog = (await import("../lib/catalog.json", { with: { type: "json" } })).default;
 for (const card of catalog.cards) {
@@ -54,7 +72,7 @@ for (const track of catalog.groups.flatMap(group => group.tracks)) {
   const response = await fetch(new URL(track.path, base));
   if (!response.ok || !response.headers.get("content-type")?.includes("audio/")) throw new Error(`missing ${track.path}`);
 }
-console.log("PASS homepage, 65 card images and 30 audio files are served by this site");
+console.log("PASS portfolio homepage, /jukebox/, legacy invite redirect, 65 card images and 30 audio files are served by this site");
 
 const created = await api("/api/rooms", { name: "主持", settings: { mode: "identity", handSize: 5 } });
 const code = created.room.code;

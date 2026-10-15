@@ -39,6 +39,8 @@ services:
       - "443:443"
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      # 寿司店发布目录：releases/<版本>/ 与相对符号链接 current。由 deploy/sync-sushi.sh 维护。
+      - ${SUSHI_RELEASE_DIR:-/srv/jukebox/sushi}:/srv/sushi:ro
       - caddy_data:/data
       - caddy_config:/config
     mem_limit: 256m

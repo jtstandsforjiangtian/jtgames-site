@@ -31,6 +31,7 @@ rsync -az --delete -e "${SSH_CMD[*]}" \
   --exclude '*.sqlite-shm' \
   --exclude .wrangler \
   --exclude .sites-runtime \
+  --exclude .sushi-release \
   ./ "$HOST:/srv/jukebox/app/"
 skip_build=0
 if command -v docker >/dev/null 2>&1; then

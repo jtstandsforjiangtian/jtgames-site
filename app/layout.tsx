@@ -3,8 +3,8 @@ import "./globals.css";
 import "./room.css";
 
 export const metadata: Metadata = {
-  title: "Jukebox — 你听到了什么？",
-  description: "与朋友一起听音乐、选插画、猜身份。2–8 人的线上桌游。",
+  title: "JT Games",
+  description: "JT 的小游戏作品：Jukebox 与寿司店 Demo。",
   robots: { index: false, follow: false },
   icons: {
     icon: "/favicon.svg",
