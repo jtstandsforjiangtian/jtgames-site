@@ -29,8 +29,19 @@ if ! wait_app_healthy; then
 fi
 # rsync replaces Caddyfile with a new inode. Recreate the container so the bind mount sees it.
 "${COMPOSE[@]}" up -d --no-build --force-recreate --no-deps caddy
-if ! "${COMPOSE[@]}" exec -T caddy caddy reload --config /etc/caddy/Caddyfile; then
-  echo "Caddy 配置未能重新加载。应用已更新，请检查 Caddyfile。" >&2
+# The recreated container already loads the new Caddyfile; the reload is a belt-and-braces
+# check. Its admin API needs a moment to come up, so retry instead of failing on the first try.
+caddy_reloaded=0
+for _ in $(seq 1 10); do
+  if "${COMPOSE[@]}" exec -T caddy caddy reload --config /etc/caddy/Caddyfile >/dev/null 2>&1; then
+    caddy_reloaded=1
+    break
+  fi
+  sleep 2
+done
+if [[ "$caddy_reloaded" != 1 ]]; then
+  echo "Caddy 配置未能重新加载。应用已更新，请检查 Caddyfile：" >&2
+  "${COMPOSE[@]}" logs --tail 20 caddy >&2 || true
   exit 1
 fi
 echo "应用已更新。数据库仍在 $DATA_DIR ，证书仍在 Docker 卷 caddy_data / caddy_config。"
