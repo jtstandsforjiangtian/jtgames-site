@@ -1,6 +1,6 @@
-import { cards, getGroup, labels, type ClipLabel } from "./catalog-utils";
+import { cards, getGroup, groups, labels, type ClipLabel } from "./catalog-utils";
 
-export type Mode = "guess" | "identity";
+export type Mode = "guess" | "identity" | "offline";
 export type Role = "author" | "spy" | "listener";
 export type Phase = "listening" | "selecting" | "discussion" | "voting" | "results";
 export type Settings = { mode: Mode; groupKey: string; handSize: number; explainFirst: boolean };
@@ -8,7 +8,7 @@ export type Player = { id: string; name: string; tokenHash: string; hand: string
 export type Ballot = { id: string; kind: "music" | "player"; prompt: string; voters: string[]; allowSelf: boolean; abstain: boolean; votes: Record<string, string>; revealed: boolean; isDefault: boolean };
 export type Round = { id: string; number: number; settings: Settings; phase: Phase; roster: string[]; roles: Record<string, Role>; authorId: string; target: ClipLabel | null; selections: Record<string, string>; cardsRevealed: boolean; targetRevealed: boolean; rolesRevealed: boolean; ballot: Ballot | null; previousBallots: Ballot[] };
 export type Playback = { id: string; groupKey: string; sequence: ClipLabel[]; startAt: number; offset: number; paused: boolean };
-export type Room = { code: string; hostId: string; settings: Settings; players: Player[]; round: Round | null; deck: string[]; discard: string[]; roundCounter: number; lastAuthorId: string | null; audio: Playback | null; log: { at: number; text: string }[]; requests: string[]; createdAt: number; updatedAt: number; revision: number };
+export type Room = { code: string; hostId: string; settings: Settings; players: Player[]; round: Round | null; deck: string[]; discard: string[]; roundCounter: number; lastAuthorId: string | null; groupBag: string[]; audio: Playback | null; log: { at: number; text: string }[]; requests: string[]; createdAt: number; updatedAt: number; revision: number };
 export type Action = { type: string; requestId?: string; [key: string]: unknown };
 export class GameError extends Error { constructor(message: string, public status = 400) { super(message); } }
 function check(condition: unknown, message: string): asserts condition { if (!condition) throw new GameError(message); }
@@ -28,7 +28,7 @@ export function nameOf(value: unknown) {
 export function settingsOf(value: unknown, base?: Settings): Settings {
   const v = value && typeof value === "object" ? value as Partial<Settings> : {};
   const s = { mode: "guess", groupKey: "G01", handSize: 5, explainFirst: false, ...base, ...v };
-  check(s.mode === "guess" || s.mode === "identity", "请选择游戏模式。");
+  check(s.mode === "guess" || s.mode === "identity" || s.mode === "offline", "请选择游戏模式。");
   check(typeof s.groupKey === "string" && getGroup(s.groupKey), "曲组不存在。");
   check(Number.isInteger(s.handSize) && s.handSize >= 3 && s.handSize <= 8, "手牌数应为 3–8。");
   return { mode: s.mode, groupKey: s.groupKey, handSize: s.handSize, explainFirst: !!s.explainFirst };
@@ -45,7 +45,7 @@ function deal(room: Room) {
   }
 }
 export function createRoom(code: string, player: Player, settings: Settings, now: number): Room {
-  return { code, hostId: player.id, settings, players: [player], round: null, deck: shuffled(cards.map(c => c.id)), discard: [], roundCounter: 0, lastAuthorId: null, audio: null, log: [{ at: now, text: "房间已建立。邀请朋友，一起入席。" }], requests: [], createdAt: now, updatedAt: now, revision: 0 };
+  return { code, hostId: player.id, settings, players: [player], round: null, deck: shuffled(cards.map(c => c.id)), discard: [], roundCounter: 0, lastAuthorId: null, groupBag: [], audio: null, log: [{ at: now, text: "房间已建立。邀请朋友，一起入席。" }], requests: [], createdAt: now, updatedAt: now, revision: 0 };
 }
 export function joinRoom(room: Room, player: Player, now: number) {
   check(room.players.length < 8, "房间已满，最多 8 人。");
@@ -57,14 +57,40 @@ function defaultBallot(r: Round): Ballot {
 }
 function openDefault(r: Round) { r.ballot = defaultBallot(r); r.phase = "voting"; }
 function finish(r: Round) { r.phase = "results"; r.cardsRevealed = true; r.targetRevealed = true; r.rolesRevealed = true; if (r.ballot) r.ballot.revealed = true; }
-function start(room: Room, now: number, force: boolean) {
-  const s = room.settings;
-  check(room.players.length >= (s.mode === "guess" ? 2 : 3), s.mode === "guess" ? "猜音乐至少需要 2 人。" : "隐藏身份至少需要 3 人；建议 4–8 人。");
-  check(!room.round || room.round.phase === "results" || force, "当前轮尚未结束。请先结束本轮，或确认强制重开。");
-  if (room.round) for (const p of room.players) {
+function discardPlayed(room: Room) {
+  if (!room.round) return;
+  for (const p of room.players) {
     const used = room.round.selections[p.id];
     if (used && p.hand.includes(used)) { p.hand = p.hand.filter(c => c !== used); room.discard.push(used); }
   }
+}
+function drawOfflineGroup(room: Room) {
+  const all = groups.filter(g => !g.quick).map(g => g.key);
+  const last = room.round?.settings.mode === "offline" ? room.round.settings.groupKey : undefined;
+  if (!room.groupBag?.length) {
+    const pool = all.filter(key => key !== last);
+    room.groupBag = shuffled(pool.length ? pool : all);
+  }
+  return room.groupBag.pop()!;
+}
+function start(room: Room, now: number, force: boolean) {
+  const s = room.settings;
+  if (s.mode === "offline") {
+    check(room.players.length >= 1, "线下猜音乐至少需要 1 人。");
+    discardPlayed(room);
+    const groupKey = drawOfflineGroup(room);
+    const settings = { ...s, groupKey };
+    const roster = room.players.map(p => p.id);
+    const roles = Object.fromEntries(roster.map(id => [id, "listener"])) as Record<string, Role>;
+    room.roundCounter++;
+    room.round = { id: crypto.randomUUID(), number: room.roundCounter, settings, phase: "listening", roster, roles, authorId: room.hostId, target: null, selections: {}, cardsRevealed: false, targetRevealed: false, rolesRevealed: false, ballot: null, previousBallots: [] };
+    room.audio = null;
+    log(room, `第 ${room.roundCounter} 轮 · 线下猜音乐 · ${getGroup(groupKey)!.label}`, now);
+    return;
+  }
+  check(room.players.length >= (s.mode === "guess" ? 2 : 3), s.mode === "guess" ? "猜音乐至少需要 2 人。" : "隐藏身份至少需要 3 人；建议 4–8 人。");
+  check(!room.round || room.round.phase === "results" || force, "当前轮尚未结束。请先结束本轮，或确认强制重开。");
+  discardPlayed(room);
   const roster = room.players.map(p => p.id);
   const randomized = shuffled(roster);
   const nextIndex = (roster.indexOf(room.lastAuthorId ?? "") + 1) % roster.length;
@@ -80,6 +106,7 @@ const needsCard = (r: Round, id: string) => r.settings.mode === "identity" || id
 export function applyAction(room: Room, playerId: string, a: Action, now = Date.now()) {
   const p = room.players.find(x => x.id === playerId); check(p, "座位已移除，请重新加入。");
   if (a.requestId && room.requests.includes(a.requestId)) return;
+  if (room.round?.settings.mode === "offline" && ["select", "advance", "vote", "ballot", "closeBallot", "reopen", "end"].includes(a.type)) throw new GameError("线下模式只播放音乐，出牌和投票在桌面上完成。");
   const host = () => check(room.hostId === playerId, "只有房主可以进行这个操作。");
   const round = () => { check(room.round, "请先开始一轮。"); return room.round; };
   if (a.type === "heartbeat") { p.lastSeen = now; return; }

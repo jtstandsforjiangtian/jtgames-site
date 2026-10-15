@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
-import { Check } from "lucide-react";
+import { useRef, useState } from "react";
+import { Pause, Play } from "lucide-react";
 import Dialog from "./Dialog";
 import { cards, cardImage, groups, tracks } from "@/lib/catalog-utils";
 
@@ -17,6 +17,8 @@ export function Rules({ onClose }: { onClose: () => void }) {
     <h3>猜音乐 · 2–8 人</h3>
     <ol><li>所有人依次听 A、B、C 三段音乐。</li><li>本轮作者秘密选择一段音乐，再从自己的手牌中选一张与它相配的插画。</li><li>作者亮出插画，其他玩家各自投票，猜它对应哪段音乐。</li><li>揭晓答案，作者解释自己的联想。下一轮按座位顺序更换作者。</li></ol>
     <p>房主可以选择让作者先解释再投票。每轮会显示猜中人数；如需记录个人积分，由房主填写。</p>
+    <h3>猜音乐 · 线下</h3>
+    <p>一个人也能开始。应用只负责随机抽取一组音乐并播放 A、B、C。选牌、解释和计分用桌上的实体卡牌完成。换一组时不会立刻重复刚听过的那一组。曲目名称请在曲库中查看。</p>
     <h3>隐藏身份 · 3–8 人，建议 4 人以上</h3>
     <p>每轮一名作者、一名间谍，其余都是普通玩家。身份只有自己知道。</p>
     <ol><li>所有人依次听相同的三段音乐。</li><li>作者秘密选定目标音乐与插画。间谍获知目标后选牌；普通玩家在不知道目标时选牌。</li><li>所有人亮出放在自己面前的插画，同时公布目标音乐。每个人轮流解释自己的画与音乐有什么关联。</li><li>讨论结束后秘密投票：普通玩家找作者，作者找间谍，间谍不投票。</li><li>公开身份与投票，按下表记分，然后开始下一轮。</li></ol>
@@ -26,8 +28,15 @@ export function Rules({ onClose }: { onClose: () => void }) {
   </div></Dialog>;
 }
 export function AudioLibrary({ onClose }: { onClose: () => void }) {
-  return <Dialog title="曲库" onClose={onClose} wide><div className="prose"><p>30 段音乐，分为十组，每轮使用其中一组。全部可以直接播放。</p><p>游戏中只显示 A、B、C。以下是曲目与演奏版本，请在开局前或游戏结束后查看。</p></div>
-    <div className="catalog-grid">{groups.filter(g => !g.quick).map(g => <div className="catalog-group" key={g.key}><h3>{g.label}</h3>{g.tracks.map(t => <div className="catalog-track" key={t.id}><span className="small-letter">{t.label}</span><div><strong>{t.title}</strong><small>{t.durationSeconds} 秒</small></div><Check size={14} /></div>)}</div>)}</div>
+  const audio = useRef<HTMLAudioElement>(null);
+  const [playing, setPlaying] = useState<string | null>(null);
+  const toggle = (id: string, path: string) => {
+    const el = audio.current; if (!el) return;
+    if (playing === id) { el.pause(); setPlaying(null); return; }
+    el.src = path; void el.play().then(() => setPlaying(id)).catch(() => setPlaying(null));
+  };
+  return <Dialog title="曲库" onClose={onClose} wide><audio ref={audio} preload="none" hidden onEnded={() => setPlaying(null)} /><div className="prose"><p>30 段音乐，分为十组，每轮使用其中一组。点按即可试听，再点一次或点另一首即停止。</p><p>游戏中只显示 A、B、C。以下是曲目与演奏版本，请在开局前或游戏结束后查看。</p></div>
+    <div className="catalog-grid">{groups.filter(g => !g.quick).map(g => <div className="catalog-group" key={g.key}><h3>{g.label}</h3>{g.tracks.map(t => <div className="catalog-track" key={t.id}><span className="small-letter">{t.label}</span><div><strong>{t.title}</strong><small>{t.durationSeconds} 秒</small></div><button type="button" className={`catalog-play ${playing === t.id ? "on" : ""}`} aria-label={playing === t.id ? `停止片段 ${t.label}` : `播放片段 ${t.label}`} disabled={!t.path} onClick={() => toggle(t.id, t.path)}>{playing === t.id ? <Pause size={14} /> : <Play size={14} />}</button></div>)}</div>)}</div>
   </Dialog>;
 }
 export function Credits({ onClose }: { onClose: () => void }) {
