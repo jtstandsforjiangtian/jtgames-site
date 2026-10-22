@@ -21,10 +21,10 @@ production and matched apart from a final newline. Its English change can be
 reviewed and deployed independently.
 
 The English Sushi change is [pull request #1](https://github.com/jtstandsforjiangtian/sushi-auto-demo/pull/1),
-commit `71def685ad33f57fd79f0f5d280ee2acbc78c757`. It updates six files; all 32
+merged into main as `6af987716252c56e0005d1c8c87921d584170f22`. It updates six files; all 32
 simulation/audio tests and JavaScript syntax checks pass. Browser visual QA
 is still pending because this environment lacked Chromium and its installation
-downloads were truncated. The PR is not a production deployment.
+downloads were truncated. The merged source change has not been deployed to production.
 
 These notes and the verifier are preparation, not evidence of a live release.
 
@@ -183,10 +183,10 @@ than an unrelated branch tip:
 
 ```sh
 JUKEBOX_SSH_KEY="$HOME/.ssh/jukebox_deploy.pem" \
-  ./deploy/publish-sushi.sh ubuntu@124.156.136.248 71def685ad33f57fd79f0f5d280ee2acbc78c757
+  ./deploy/publish-sushi.sh ubuntu@124.156.136.248 6af987716252c56e0005d1c8c87921d584170f22
 ```
 
-If the Sushi PR receives further edits, substitute its reviewed final commit.
+This is the reviewed English commit on Sushi main; use the exact SHA to avoid including unrelated later changes.
 These are the existing deployment scripts; no hosting
 migration or new domain is needed. Do not upload private keys to GitHub or the
 website. This execution environment did not contain the Mac deployment key.
