@@ -12,7 +12,8 @@
     "test": "node tests/game.test.mjs && node tests/store.test.mjs && node tests/interface.test.mjs && node tests/assets.test.mjs && node tests/backup.test.mjs",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "test:ai": "node tests/ai-decision.test.mjs && node tests/ai-coordinator.test.mjs && node tests/ai-provider.test.mjs && node tests/ai-assets-audit.test.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
